@@ -1,20 +1,23 @@
-<mat-card>
+<mat-card ng-if="task">
   <mat-card-header>
      <mat-card-title>Edycja zadania</mat-card-title>
   </mat-card-header>
 <div class="example-container">
     <mat-form-field>
-      <input matInput placeholder="Input">
+      <input matInput placeholder="Tytuł" [(ngModel)]="task.title">
     </mat-form-field>
 
     <mat-form-field>
-      <textarea matInput placeholder="Textarea"></textarea>
+      <textarea matInput placeholder="Opis" [(ngModel)]="task.description"></textarea>
     </mat-form-field>
 
     <mat-form-field>
-      <mat-select placeholder="Select">
-        <mat-option value="option">Option</mat-option>
-      </mat-select>
+      <input matInput  [matDatepicker]="dp" placeholder="Data zadania" [(ngModel)]="task.borderDate">
+      <mat-datepicker-toggle matSuffix [for]="dp" ></mat-datepicker-toggle>
+      <mat-datepicker #dp ></mat-datepicker>
     </mat-form-field>
+
+    <mat-slide-toggle [(ngModel)]="task.isDone">Zrobione ?</mat-slide-toggle>
+
   </div>
 </mat-card>
