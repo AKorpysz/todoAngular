@@ -1,10 +1,12 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <span>MyMaterial</span>
+    <span  matTooltip="Tooltip test">MyMaterial ToDoApp</span>
 
-    <span class="example-spacer"></span>
-
+      <span matTooltip="Kliknij aby dodać nowe zadanie" layout-align="end center" class="rightPartOfMenu">
+        <button mat-icon-button >
+          <mat-icon >add</mat-icon>
+        </button>
+      </span>
   </mat-toolbar-row>
 </mat-toolbar>
-
 <router-outlet></router-outlet>
