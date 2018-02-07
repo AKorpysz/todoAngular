@@ -20,8 +20,8 @@
                 <span>Edytuj</span>
               </button>
             </span>
-            <span matTooltip="Naciśnij aby usunąć">
-              <button mat-raised-button color="warn">
+            <span matTooltip="Naciśnij aby usunąć" (click)="clickMethod(task)">
+              <button mat-raised-button color="warn" >
                  <mat-icon>delete</mat-icon>
                 <span>Usuń</span>
               </button>

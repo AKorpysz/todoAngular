@@ -18,4 +18,9 @@ export class MainViewComponent implements OnInit {
     this.taskService.getAllTasks().subscribe(x => this.tasks = x);
   }
 
+  clickMethod(task: TaskDto) {
+    if (confirm('Are you sure to delete ' + task.title)) {
+        this.taskService.remove(task);
+    }
+  }
 }
