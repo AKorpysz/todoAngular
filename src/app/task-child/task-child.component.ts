@@ -10,6 +10,8 @@ export class TaskChildComponent implements OnInit {
   @Input()
   task: TaskDto;
 
+  @Input() test: string;
+
   constructor() { }
 
   ngOnInit() {

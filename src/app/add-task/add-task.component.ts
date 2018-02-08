@@ -14,8 +14,7 @@ export class AddTaskComponent implements OnInit {
   @Input()
   newTask = new TaskDto();
   tasks = TASKS;
-
-  @Input()
+  version = 'to jest testowy string';
   tmpTask = TASKS[0];
 
   ngOnInit() {
