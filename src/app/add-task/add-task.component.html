@@ -1,14 +1,4 @@
-<!--<app-task-editor [task]="newTask"></app-task-editor>
-<button>Dupa</button> -->
-
-<app-version-parent></app-version-parent>
-
-<h1>this is single task child {{tmpTask.id}} {{tmpTask.title}} {{tmpTask.description}}</h1>
-<app-task-child [task]="tmpTask" [test]="version"></app-task-child>
-
-<h2>i have {{tasks.length}} tasks</h2>
-<app-task-child *ngFor="let tsk of tasks"
-  [task]="tsk"
-  >
-</app-task-child>
+<app-task-editor [task]="newTask"></app-task-editor>
+<button mat-raised-button color="primary" (click)="addTask()">Dodaj</button>
+<button mat-raised-button color="warn" routerLink="/">Anuluj</button>
 

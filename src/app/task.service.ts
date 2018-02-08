@@ -25,4 +25,18 @@ export class TaskService {
        }
      }
   }
+
+  add(task: TaskDto): void {
+    if (task === null || task === undefined) {
+        return;
+     }
+     // tak wiem dodawanie idków po rozmiarze tablicy jest głupie
+     const existingTask = TASKS.find(x => x.id === task.id);
+     if (existingTask !== null && existingTask !== undefined) {
+        throw new Error('Task exist, cannot add');
+     }
+     const id = TASKS.length + 1;
+     task.id = id;
+     TASKS.push(task);
+  }
 }

@@ -20,13 +20,10 @@ export class TaskEditorComponent implements OnInit {
   }
 
   private getTask(): void {
+    if (this.task === null || this.task === undefined ) {
     const id = +this.route.snapshot.paramMap.get('id');
     this.taskService.getTask(id)
     .subscribe(x => this.task = x);
+    }
   }
-
-  public setTask(task: TaskDto): void {
-    this.task = task;
-  }
-
 }

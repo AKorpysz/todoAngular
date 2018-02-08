@@ -1,4 +1,6 @@
-<mat-card ng-if="task" id="addComponent">
+<h4 *ngIf="task===undefined">Undefined</h4>
+<h4 *ngIf="task===null">Null</h4>
+<mat-card ng-if="task!==undefined">
 <div class="example-container">
     <mat-form-field ng-if="task.title">
       <input matInput placeholder="Tytuł" [(ngModel)]="task.title">

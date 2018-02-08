@@ -7,9 +7,9 @@ import { TaskDto } from '../dto/TaskDto';
   styleUrls: ['./task-child.component.css']
 })
 export class TaskChildComponent implements OnInit {
-  @Input()
-  task: TaskDto;
-
+  @Input() task: TaskDto;
+  @Input() major: number;
+  @Input() minor: number;
   @Input() test: string;
 
   constructor() { }

@@ -4,13 +4,13 @@
       <mat-card>
         <div>
           <mat-card-header>
-            <!-- zajebiście długi czas response serwera, dlatego obrazki tymczasowo wyłączone -->
-            <div mat-card-avatar class="example-header-image"></div>
+            <!-- zajebiście długi czas response serwera, dlatego obrazki tymczasowo wyłączone
+            <div mat-card-avatar class="example-header-image"></div>-->
             <mat-card-title>{{task.title | uppercase}}  </mat-card-title>
             <mat-card-subtitle>Data zadania {{ task.borderDate | date:"dd MMMM yyyy HH:mm:ss" }}</mat-card-subtitle>
           </mat-card-header>
 
-            <img mat-card-image src="http://lorempixel.com/300/100/" alt="Example photo" class="cardImage" />
+          <!--  <img mat-card-image src="http://lorempixel.com/300/100/" alt="Example photo" class="cardImage" />-->
             <mat-card-content>{{task.description}}</mat-card-content>
 
           <mat-card-actions layout="row" class="bottomMenu">

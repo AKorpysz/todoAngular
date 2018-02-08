@@ -1,9 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { TaskEditorComponent} from '../task-editor/task-editor.component';
 import { TaskService } from '../task.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TaskDto } from '../dto/TaskDto';
 import { TASKS } from '../mock-tasks';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-add-task',
@@ -11,11 +12,26 @@ import { TASKS } from '../mock-tasks';
   styleUrls: ['./add-task.component.css']
 })
 export class AddTaskComponent implements OnInit {
+
+  constructor(private taskService: TaskService,
+    public snackBar: MatSnackBar,
+    private router: Router) { }
   @Input()
   newTask = new TaskDto();
-  tasks = TASKS;
-  version = 'to jest testowy string';
-  tmpTask = TASKS[0];
+
+  addTask(): void {
+    try {
+      this.taskService.add(this.newTask);
+      this.snackBar.open('Zadanie dodane poprawnie !', 'Dodano poprawnie', {
+        duration: 2000,
+      });
+      this.router.navigate(['']);
+    } catch (err) {
+      this.snackBar.open(err, 'Błąd !', {
+        duration: 2000,
+      });
+    }
+  }
 
   ngOnInit() {
   }
