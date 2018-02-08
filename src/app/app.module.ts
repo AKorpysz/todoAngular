@@ -12,6 +12,7 @@ import { AddTaskComponent } from './add-task/add-task.component';
 import { TaskChildComponent } from './task-child/task-child.component';
 import { VersionParentComponent } from './version-parent.component';
 import { VersionChildComponent } from './version-child.component';
+import { TableViewComponent } from './table-view/table-view.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { VersionChildComponent } from './version-child.component';
     AddTaskComponent,
     TaskChildComponent,
     VersionParentComponent,
-    VersionChildComponent
+    VersionChildComponent,
+    TableViewComponent
   ],
   imports: [
     BrowserModule,
