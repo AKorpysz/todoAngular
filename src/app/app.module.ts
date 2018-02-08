@@ -8,12 +8,16 @@ import { MaterialModule } from './material.module';
 import { TaskService } from './task.service';
 import { MainViewComponent } from './main-view/main-view.component';
 import { TaskEditorComponent } from './task-editor/task-editor.component';
+import { AddTaskComponent } from './add-task/add-task.component';
+import { TaskChildComponent } from './task-child/task-child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainViewComponent,
-    TaskEditorComponent
+    TaskEditorComponent,
+    AddTaskComponent,
+    TaskChildComponent
   ],
   imports: [
     BrowserModule,
