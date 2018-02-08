@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import {Sort} from '@angular/material';
 import { TableViewComponent } from './table-view.component';
 
 describe('TableViewComponent', () => {

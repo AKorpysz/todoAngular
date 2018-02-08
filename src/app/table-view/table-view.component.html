@@ -1,32 +1,38 @@
-<div>
-  <mat-table #table [dataSource]="tasks">
+<div class="example-container mat-elevation-z8">
+
+  <mat-table #table [dataSource]="dataSource" matSort>
 
   <ng-container matColumnDef="id">
-    <mat-header-cell *matHeaderCellDef> Id </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Id </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="title">
-    <mat-header-cell *matHeaderCellDef> Tytuł </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Tytuł </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.title}} </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="description">
-    <mat-header-cell *matHeaderCellDef> Opis </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Opis </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.description}} </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="isDone">
-    <mat-header-cell *matHeaderCellDef> Wykonano ? </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Wykonano ? </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.isDone}} </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="borderDate">
-    <mat-header-cell *matHeaderCellDef> Data realizacji </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Data realizacji </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.borderDate | date:"dd MMMM yyyy HH:mm:ss"}} </mat-cell>
   </ng-container>
 
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
   <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
   </mat-table>
+  <mat-paginator #paginator [length]="tasks.length"
+    [pageSize]="10"
+    [pageSizeOptions]="[5, 10, 25, 100]">
+</mat-paginator>
 </div>

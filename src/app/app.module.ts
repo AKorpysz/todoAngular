@@ -10,9 +10,8 @@ import { MainViewComponent } from './main-view/main-view.component';
 import { TaskEditorComponent } from './task-editor/task-editor.component';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { TaskChildComponent } from './task-child/task-child.component';
-import { VersionParentComponent } from './version-parent.component';
-import { VersionChildComponent } from './version-child.component';
 import { TableViewComponent } from './table-view/table-view.component';
+
 
 @NgModule({
   declarations: [
@@ -21,8 +20,6 @@ import { TableViewComponent } from './table-view/table-view.component';
     TaskEditorComponent,
     AddTaskComponent,
     TaskChildComponent,
-    VersionParentComponent,
-    VersionChildComponent,
     TableViewComponent
   ],
   imports: [
