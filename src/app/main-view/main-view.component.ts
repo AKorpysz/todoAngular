@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MaterialModule } from '../material.module';
 import { TaskService } from '../task.service';
 import { TaskDto } from '../dto/TaskDto';
+import { TruncateModule } from 'ng2-truncate';
 
 @Component({
   selector: 'app-main-view',

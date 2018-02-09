@@ -2,6 +2,11 @@
   display: flex;
   flex-direction: column;
   min-width: 300px;
+  margin: 30px;
+}
+
+.highlight{
+  background: rgb(154, 240, 159); /* green */
 }
 
 .mat-table {
@@ -11,4 +16,8 @@
 
 .mat-header-cell.mat-sort-header-sorted {
   color: black;
+}
+
+.mat-column-icon {
+  flex: 0 0 70px;
 }

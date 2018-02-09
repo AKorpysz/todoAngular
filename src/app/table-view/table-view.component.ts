@@ -12,10 +12,15 @@ import {  MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 export class TableViewComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
+  selectedRowIndex = -1;
   tasks: TaskDto[];
   dataSource: MatTableDataSource<TaskDto>;
-  displayedColumns = ['id', 'title', 'description', 'isDone' , 'borderDate'];
+  displayedColumns = ['icon', 'id', 'title', 'description', 'isDone' , 'borderDate'];
   constructor(private taskService: TaskService) {     }
+
+  highlight(row) {
+    this.selectedRowIndex = row.id;
+  }
 
   ngOnInit() {
     this.taskService.getAllTasks().subscribe(x => this.tasks = x);

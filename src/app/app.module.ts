@@ -11,6 +11,7 @@ import { TaskEditorComponent } from './task-editor/task-editor.component';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { TaskChildComponent } from './task-child/task-child.component';
 import { TableViewComponent } from './table-view/table-view.component';
+import { TruncateModule } from 'ng2-truncate';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { TableViewComponent } from './table-view/table-view.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    TruncateModule
   ],
   providers: [TaskService],
   bootstrap: [AppComponent]

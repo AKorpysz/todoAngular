@@ -5,10 +5,9 @@
 }
 
 .mainPanel {
-  position: relative;
-  top: 20px;
-  left: 20px;
-  width: 90%;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  margin: 30px;
 
 }
