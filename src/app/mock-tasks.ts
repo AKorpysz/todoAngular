@@ -2,7 +2,17 @@ import {TaskDto} from './dto/TaskDto';
 
 export const TASKS: TaskDto[] = [
   // tslint:disable-next-line:max-line-length
-  {id: 1, title: 'Task 1', description: 'Long description of Task 1', isDone: true, borderDate: new Date(2016, 1, 1, 0, 59, 2) },
+  {id: 1, title: 'Task 1', description: `Radosław Poszwiński został właśnie nowym pracownikiem TVP. Na Twitterze znany jako @bogdan607 popełnił mnóstwo wulgarnych i kontrowersyjnych wpisów. Postanowił więc wszystkie skasować.
+  Przypomnijmy, Radosław Poszwiński odpowiada od teraz w TVP Info za media społecznościowe. Nowy pracownik telewizji publicznej najpierw musiał jednak zrobić porządek na swoim prywatnym profilu na Twitterze.
+  Przez kilka lat zdążył bowiem tam zamieścić ponad 200 tys. wpisów. Wiele z nich było - delikatnie mówiąc - dość kontrowersyjnych. Poszwiński postanowił więc na początek ograniczyć dostęp do swojego konta, tak by jego stare wpisy mogli przeglądać wyłącznie jego fani.
+
+  A potem zabrał się do czyszczenia. I to gruntownego - w ciągu kilkudziesięciu godzin z jego konta na Twitterze zniknęły najprawdopodobniej wszystkie wpisy.
+
+  "Najprawdopodobniej", bo licznik na jego koncie - w chwili powstawania tego tekstu - pokazywał dokładnie 1404 tweety. Ale na profilu @bogdan607 nie widać już ani jednego wpisu. Zniknęła też nałożona na czas całej operacji "blokada" dla innych użytkowników.
+
+  "Jak można zaprzeczyć własnym myślom?"
+
+  Spektakularna akcja czyszczenia konta z własnych tweetów nie mogła umknąć innym użytkownikom tego serwisu. Spektakularna i bardzo pracochłonna, bo Twitter nie oferuje możliwości automatycznego kasowania wszystkich wpisów.`, isDone: true, borderDate: new Date(2016, 1, 1, 0, 59, 2) },
   {id: 2, title: 'Task 2', description: 'Long description of Task 2', isDone: false, borderDate: new Date(2012, 2, 11, 1, 18, 2)},
   {id: 3, title: 'Task 3', description: 'Long description of Task 3', isDone: true, borderDate: new Date(2013, 3, 7, 3, 17, 2)},
   {id: 4, title: 'Task 4', description: 'Long description of Task 4', isDone: true, borderDate: new Date(2014, 4, 3, 5, 22, 2)},

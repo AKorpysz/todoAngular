@@ -2,18 +2,46 @@ mat-card {
   width: calc(100% - 70px);
   height: calc(100% - 70px);
   max-width: 400px;
+  max-height: 350px;
+}
+
+.mainContainer {
+  position: absolute;
+}
+
+.headerContainer {
+  position: relative;
+  top: 5px;
+}
+
+.photoContainer {
+  position: relative;
+  top: 10px;
+  max-height: 100px;
+}
+
+.contentContainer {
+  position: relative;
+  top: 15px;
+  max-height: 120px;
+  min-height: 120px;
+  overflow: hidden;
+}
+
+.buttonContainer {
+  position: relative;
+  top: 25px;
+  max-height: 150px;
 }
 
 .example-header-image {
-  background-image: url('http://lorempixel.com/50/50/');
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
   background-size: cover;
 }
 
 .cardImage {
-  max-height: 50%;
+  max-height: 100px;
   max-width: 100%;
-  padding: 20px;
-  align-content: center;
 }
 
 .bottomMenu {

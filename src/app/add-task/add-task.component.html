@@ -1,11 +1,13 @@
-<app-task-editor [task]="newTask"></app-task-editor>
-<div class="buttonsPanel">
-  <button mat-raised-button color="primary" (click)="addTask()">
-    <mat-icon>add</mat-icon>
-    <span>Dodaj</span>
-  </button>
-  <button mat-raised-button color="warn" routerLink="/">
-    <mat-icon>cancel</mat-icon>
-    <span>Anuluj</span>
-  </button>
+<div class="mainPanel">
+  <app-task-editor [task]="newTask"></app-task-editor>
+  <div class="buttonsPanel">
+    <button mat-raised-button color="primary" (click)="addTask()">
+      <mat-icon>add</mat-icon>
+      <span>Dodaj</span>
+    </button>
+    <button mat-raised-button color="warn" routerLink="/">
+      <mat-icon>cancel</mat-icon>
+      <span>Anuluj</span>
+    </button>
+  </div>
 </div>

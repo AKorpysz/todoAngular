@@ -2,34 +2,43 @@
   <mat-grid-list cols="4" rowHeight="1:1">
     <mat-grid-tile *ngFor="let task of tasks">
       <mat-card>
-        <div>
-          <mat-card-header>
-            <!-- zajebiście długi czas response serwera, dlatego obrazki tymczasowo wyłączone
-            <div mat-card-avatar class="example-header-image"></div>-->
-            <mat-card-title>{{task.title | uppercase}}  </mat-card-title>
-            <mat-card-subtitle>Data zadania {{ task.borderDate | date:"dd MMMM yyyy HH:mm:ss" }}</mat-card-subtitle>
-          </mat-card-header>
+        <div class="mainContainer">
+          <div class="headerContainer">
+            <mat-card-header>
+              <!-- zajebiście długi czas response serwera, dlatego obrazki tymczasowo wyłączone-->
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>{{task.title | uppercase}} </mat-card-title>
+              <mat-card-subtitle>Data zadania {{ task.borderDate | date:"dd MMMM yyyy HH:mm:ss" }}</mat-card-subtitle>
+            </mat-card-header>
+          </div>
+          <div>
+          </div>
 
-          <!--  <img mat-card-image src="http://lorempixel.com/300/100/" alt="Example photo" class="cardImage" />-->
-            <mat-card-content>{{task.description}}</mat-card-content>
+          <div class="photoContainer">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTjWm77bL2NmqXiPYuZCZhd7OMFbaofMJqHqidmFhdhZ0VV8ZPlw" alt="Example photo"
+            />
+          </div>
 
-          <mat-card-actions layout="row" class="bottomMenu">
-             <span matTooltip="Naciśnij aby przejść do edycji">
+          <div class="contentContainer">
+            <p> {{task.description}} </p>
+          </div>
+
+          <div class="buttonContainer">
+            <span matTooltip="Naciśnij aby przejść do edycji">
               <button mat-raised-button color="primary" routerLink="/detail/{{task.id}}">
                 <mat-icon>edit</mat-icon>
                 <span>Edytuj</span>
               </button>
             </span>
             <span matTooltip="Naciśnij aby usunąć" (click)="clickMethod(task)">
-              <button mat-raised-button color="warn" >
-                 <mat-icon>delete</mat-icon>
+              <button mat-raised-button color="warn">
+                <mat-icon>delete</mat-icon>
                 <span>Usuń</span>
               </button>
             </span>
-          </mat-card-actions>
+          </div>
         </div>
       </mat-card>
     </mat-grid-tile>
   </mat-grid-list>
 </div>
-
