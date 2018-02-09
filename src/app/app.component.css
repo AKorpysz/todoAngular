@@ -1,5 +1,67 @@
+.toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
 .rightPartOfMenu {
   position: absolute;
   top: 20px;
   right: 20px;
+}
+
+.title {
+  min-width: 300px;
+  max-width: 400px;
+  color: #fff;
+}
+
+.sidenavMenu
+{
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.sidenavMenuTop
+{
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.sidenavMenuBottom
+{
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.sidenav {
+  min-width: 250 px;
+  background: #3f51b5;
+}
+
+.menuButton{
+  position: relative;
+  left: 20px;
+}
+
+.sidenavContent {
+    width: inherit;
+    overflow: scroll;
+    min-height: 100%;
+    max-height: 100%;
+}
+
+.example-container {
+  position: absolute;
+  top: 70px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
 }

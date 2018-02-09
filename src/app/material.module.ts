@@ -4,13 +4,13 @@ import { MatButtonModule, MatToolbarModule, MatCheckboxModule, MatAutocompleteMo
 import { MatSelectModule, MatSlideToggleModule, MatFormFieldModule, MatCardModule  } from '@angular/material';
 import { MatGridListModule, MatDividerModule, MatListModule, MatIconModule, MatTableModule, MatRadioModule  } from '@angular/material';
 import {MatInputModule, MatNativeDateModule ,  MatTooltipModule, MatSnackBarModule,  MatSortModule} from '@angular/material';
-import { MatPaginatorModule } from '@angular/material';
+import { MatPaginatorModule, MatSidenavModule } from '@angular/material';
 
 @NgModule({
   // tslint:disable-next-line:max-line-length
-  imports: [ MatPaginatorModule, MatSortModule, MatSnackBarModule, MatTooltipModule, MatNativeDateModule, MatInputModule, MatButtonModule, MatToolbarModule, MatCheckboxModule, MatAutocompleteModule, MatDatepickerModule, MatSelectModule, MatSlideToggleModule, MatFormFieldModule, MatCardModule, MatGridListModule, MatDividerModule, MatListModule, MatIconModule, MatTableModule, MatRadioModule],
+  imports: [ MatSidenavModule, MatPaginatorModule, MatSortModule, MatSnackBarModule, MatTooltipModule, MatNativeDateModule, MatInputModule, MatButtonModule, MatToolbarModule, MatCheckboxModule, MatAutocompleteModule, MatDatepickerModule, MatSelectModule, MatSlideToggleModule, MatFormFieldModule, MatCardModule, MatGridListModule, MatDividerModule, MatListModule, MatIconModule, MatTableModule, MatRadioModule],
   // tslint:disable-next-line:max-line-length
-  exports: [ MatPaginatorModule, MatSortModule, MatSnackBarModule, MatTooltipModule, MatNativeDateModule, MatInputModule, MatButtonModule, MatToolbarModule, MatCheckboxModule, MatAutocompleteModule, MatDatepickerModule, MatSelectModule, MatSlideToggleModule, MatFormFieldModule, MatCardModule, MatGridListModule, MatDividerModule, MatListModule, MatIconModule, MatTableModule, MatRadioModule],
+  exports: [ MatSidenavModule, MatPaginatorModule, MatSortModule, MatSnackBarModule, MatTooltipModule, MatNativeDateModule, MatInputModule, MatButtonModule, MatToolbarModule, MatCheckboxModule, MatAutocompleteModule, MatDatepickerModule, MatSelectModule, MatSlideToggleModule, MatFormFieldModule, MatCardModule, MatGridListModule, MatDividerModule, MatListModule, MatIconModule, MatTableModule, MatRadioModule],
 })
 export class MaterialModule {
 }

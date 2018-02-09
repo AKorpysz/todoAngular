@@ -1,20 +1,77 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" class="toolbar">
   <mat-toolbar-row>
+    <span matTooltip="Kliknij aby otworzyć menu">
+      <button mat-button (click)="open()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </span>
+
     <button mat-button routerLink="/">MyMaterial ToDoApp</button>
-      <div class="rightPartOfMenu">
-      <span matTooltip="Kliknij aby dodać nowe zadanie"  routerLink="/add">
-        <button mat-button >
-          <mat-icon >add</mat-icon>
+
+    <mat-form-field *ngIf="false">
+      <input matInput [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let task of filteredTasks | async" [value]="task.title">
+          <div>
+            <h1 class="tessClass">{{ task.Title }}</h1>
+          </div>
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+
+    <div class="rightPartOfMenu">
+      <span matTooltip="Kliknij aby dodać nowe zadanie">
+        <button mat-button routerLink="/add">
+          <mat-icon>add</mat-icon>
           <span>Nowe zadanie</span>
         </button>
       </span>
-      <span matTooltip="Kliknij aby zobaczyć widok tabeli"  routerLink="/table">
-        <button mat-button >
-          <mat-icon >table</mat-icon>
+      <span matTooltip="Kliknij aby zobaczyć widok tabeli">
+        <button mat-button routerLink="/table">
+          <mat-icon>table</mat-icon>
           <span>Tabela</span>
         </button>
       </span>
     </div>
   </mat-toolbar-row>
 </mat-toolbar>
-<router-outlet></router-outlet>
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened" class="sidenav">
+    <div class="sidenavMenu">
+      <div class="sidenavMenuTop">
+        <div class="menuButton">
+          <button mat-button routerLink="/">
+            <mat-icon>dashboard</mat-icon>
+            <span>Dashboard</span>
+          </button>
+        </div>
+        <div class="menuButton">
+          <button mat-button routerLink="/table">
+            <mat-icon>table</mat-icon>
+            <span>Tabela</span>
+          </button>
+        </div>
+        <div class="menuButton">
+          <button mat-button routerLink="/add">
+            <mat-icon>add</mat-icon>
+            <span>Nowe zadanie</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="sidenavMenuBottom">
+        <div class="menuButton">
+          <button mat-button routerLink="/add">
+            <mat-icon>settings</mat-icon>
+            <span>Opcje</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+       <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

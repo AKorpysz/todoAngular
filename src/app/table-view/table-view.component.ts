@@ -9,7 +9,7 @@ import {  MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
   templateUrl: './table-view.component.html',
   styleUrls: ['./table-view.component.css']
 })
-export class TableViewComponent  {
+export class TableViewComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   tasks: TaskDto[];
@@ -25,6 +25,14 @@ export class TableViewComponent  {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
   }
+
+  getColor(task: TaskDto): string {
+    if (task === null || task === undefined) {
+      return 'grey';
+    }
+    if (task.isDone) {
+      return 'green';
+    }
+    return 'red';
+  }
 }
-
-

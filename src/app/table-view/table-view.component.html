@@ -24,7 +24,7 @@
 
   <ng-container matColumnDef="borderDate">
     <mat-header-cell *matHeaderCellDef mat-sort-header> Data realizacji </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.borderDate | date:"dd MMMM yyyy HH:mm:ss"}} </mat-cell>
+    <mat-cell *matCellDef="let element" [style.color]="getColor(element)"> {{element.borderDate | date:"dd MMMM yyyy HH:mm:ss"}} </mat-cell>
   </ng-container>
 
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
