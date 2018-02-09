@@ -1,9 +1,3 @@
-.buttonsPanel {
-  position: relative;
-  top: 20px;
-  left: 40px;
-}
-
 .mainPanel {
   display: flex;
   flex-direction: column;

@@ -1,4 +1,4 @@
-<mat-toolbar color="primary" class="toolbar">
+<mat-toolbar color="primary" class= "toolbar mat-elevation-z12" >
   <mat-toolbar-row>
     <span matTooltip="Kliknij aby otworzyć menu">
       <button mat-button (click)="open()">
@@ -40,7 +40,7 @@
   <mat-sidenav #sidenav mode="side" [(opened)]="opened" class="sidenav">
     <div class="sidenavMenu">
       <div class="sidenavMenuTop">
-        <div class="menuButton">
+        <div class="menuButton buttonTop">
           <button mat-button routerLink="/">
             <mat-icon>dashboard</mat-icon>
             <span>Dashboard</span>
@@ -61,8 +61,8 @@
       </div>
 
       <div class="sidenavMenuBottom">
-        <div class="menuButton">
-          <button mat-button routerLink="/add">
+        <div class="menuButton buttonBottom">
+          <button mat-button (click)="openSetting()">
             <mat-icon>settings</mat-icon>
             <span>Opcje</span>
           </button>

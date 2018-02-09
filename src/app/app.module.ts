@@ -12,6 +12,7 @@ import { AddTaskComponent } from './add-task/add-task.component';
 import { TaskChildComponent } from './task-child/task-child.component';
 import { TableViewComponent } from './table-view/table-view.component';
 import { TruncateModule } from 'ng2-truncate';
+import { TaskDetailsComponentComponent } from './task-details-component/task-details-component.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { TruncateModule } from 'ng2-truncate';
     TaskEditorComponent,
     AddTaskComponent,
     TaskChildComponent,
-    TableViewComponent
+    TableViewComponent,
+    TaskDetailsComponentComponent
   ],
   imports: [
     BrowserModule,

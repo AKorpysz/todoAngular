@@ -1,5 +1,11 @@
+<mat-toolbar color="primary" class="mat-elevation-z12">
+    <mat-toolbar-row>
+      <span>Dodaj nowe zadanie</span>
+    </mat-toolbar-row>
+</mat-toolbar>
+
 <div class="mainPanel">
-  <app-task-editor [task]="newTask"></app-task-editor>
+  <app-task-details-component [task]="newTask"></app-task-details-component>
   <div class="buttonsPanel">
     <button mat-raised-button color="primary" (click)="addTask()">
       <mat-icon>add</mat-icon>

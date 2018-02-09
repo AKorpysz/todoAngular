@@ -7,8 +7,8 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-task-editor',
-  templateUrl: '../shared/editor-template.html',
-  styleUrls: ['../shared/editor-template.css']
+  templateUrl: './task-editor.component.html',
+  styleUrls: ['./task-editor.component.css']
 })
 export class TaskEditorComponent implements OnInit {
   @Input()
@@ -20,10 +20,8 @@ export class TaskEditorComponent implements OnInit {
   }
 
   private getTask(): void {
-    if (this.task === null || this.task === undefined ) {
     const id = +this.route.snapshot.paramMap.get('id');
     this.taskService.getTask(id)
     .subscribe(x => this.task = x);
-    }
   }
 }

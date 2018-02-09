@@ -5,6 +5,7 @@ import {Observable} from 'rxjs/Observable';
 import {startWith} from 'rxjs/operators/startWith';
 import {map} from 'rxjs/operators/map';
 import { TASKS } from '../app/mock-tasks';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,7 @@ export class AppComponent {
   filteredTasks: Observable<any[]>;
   tasks = TASKS;
   opened = true;
-  constructor() {
+  constructor(public snackBar: MatSnackBar) {
     this.stateCtrl = new FormControl();
     this.filteredTasks = this.stateCtrl.valueChanges
       .pipe(
@@ -28,6 +29,12 @@ export class AppComponent {
   filterTasks(name: string) {
     return this.tasks.filter(state =>
       state.title.toLowerCase().indexOf(name.toLowerCase()) === 0);
+  }
+
+  openSetting() {
+    this.snackBar.open('Twoje niedoczekanie !', 'Opcji nie ma, bo i co tu edytować !', {
+      duration: 4000,
+    });
   }
 
   open(): void {
