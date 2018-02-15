@@ -11,7 +11,7 @@ import { MatSnackBar } from '@angular/material';
   templateUrl: './add-task.component.html',
   styleUrls: ['./add-task.component.css']
 })
-export class AddTaskComponent implements OnInit {
+export class AddTaskComponent  {
 
   constructor(private taskService: TaskService,
     public snackBar: MatSnackBar,
@@ -31,8 +31,5 @@ export class AddTaskComponent implements OnInit {
         duration: 2000,
       });
     }
-  }
-
-  ngOnInit() {
   }
 }

@@ -16,8 +16,10 @@ export class TableViewComponent implements OnInit {
   tasks: TaskDto[];
   dataSource: MatTableDataSource<TaskDto>;
   displayedColumns = ['icon', 'id', 'title', 'description', 'isDone' , 'borderDate'];
+  private colorGrey = 'grey';
+  private colorGreen = 'green';
+  private colorRed = 'red';
   constructor(private taskService: TaskService) {     }
-
   highlight(row) {
     this.selectedRowIndex = row.id;
   }
@@ -26,6 +28,8 @@ export class TableViewComponent implements OnInit {
     this.taskService.getAllTasks().subscribe(x => this.tasks = x);
     this.dataSource = new MatTableDataSource(this.tasks);
   }
+
+  // tslint:disable-next-line:use-life-cycle-interface
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
@@ -33,11 +37,11 @@ export class TableViewComponent implements OnInit {
 
   getColor(task: TaskDto): string {
     if (task === null || task === undefined) {
-      return 'grey';
+      return this.colorGrey;
     }
     if (task.isDone) {
-      return 'green';
+      return this.colorGreen;
     }
-    return 'red';
+    return this.colorRed;
   }
 }

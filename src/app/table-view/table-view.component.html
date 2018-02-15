@@ -1,7 +1,7 @@
 <mat-toolbar color="primary" class="mat-elevation-z12">
-    <mat-toolbar-row>
-      <span>Widok tabelaryczny</span>
-    </mat-toolbar-row>
+  <mat-toolbar-row>
+    <span>Widok tabelaryczny</span>
+  </mat-toolbar-row>
 </mat-toolbar>
 
 <div class="example-container mat-elevation-z8">
@@ -11,7 +11,7 @@
     <ng-container matColumnDef="icon">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Idź do </mat-header-cell>
       <mat-cell *matCellDef="let element">
-          <mat-icon routerLink="/detail/{{element.id}}">forward</mat-icon>
+        <mat-icon routerLink="/detail/{{element.id}}">forward</mat-icon>
       </mat-cell>
     </ng-container>
 
