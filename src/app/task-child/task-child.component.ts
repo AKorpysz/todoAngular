@@ -8,9 +8,5 @@ import { TaskDto } from '../dto/TaskDto';
 })
 export class TaskChildComponent {
   @Input() task: TaskDto;
-  @Input() major: number;
-  @Input() minor: number;
-  @Input() test: string;
-
   constructor() { }
 }

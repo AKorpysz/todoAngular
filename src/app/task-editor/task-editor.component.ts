@@ -3,6 +3,7 @@ import { MaterialModule } from '../material.module';
 import {TaskService} from '../task.service';
 import {TaskDto} from '../dto/TaskDto';
 import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs/Subscription';
 
 
 @Component({
@@ -11,6 +12,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./task-editor.component.css']
 })
 export class TaskEditorComponent implements OnInit {
+  private subscription: Subscription;
   @Input()
   task: TaskDto;
   constructor(private taskService: TaskService, private route: ActivatedRoute) { }
@@ -19,9 +21,15 @@ export class TaskEditorComponent implements OnInit {
     this.getTask();
   }
 
+  ngOnDestroy() {
+    if (this.subscription !== null && this.subscription !== undefined ) {
+      this.subscription.unsubscribe();
+    }
+  }
+
   private getTask(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.taskService.getTask(id)
+    this.subscription = this.taskService.getTask(id)
     .subscribe(x => this.task = x);
   }
 }
